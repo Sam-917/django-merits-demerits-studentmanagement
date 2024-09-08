@@ -1,0 +1,33 @@
+  
+/* for custom scrollbar for webkit browser*/
+    
+::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  }
+  ::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 3px;
+  }
+
+  .table-responsive {
+    overflow-x: auto; /* Ensure horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for touch devices */
+}
+
+.table-responsive::-webkit-scrollbar {
+    height: 6px; /* Set scrollbar height for horizontal scroll */
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+}
