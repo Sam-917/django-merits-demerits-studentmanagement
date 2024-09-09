@@ -1,0 +1,24 @@
+version: '3.9'
+
+services:
+  web:
+    build: .
+    container_name: schoolstudentmanagment
+    volumes:
+      - .:/app  # Mount your project code into the container
+    ports:
+      - 8000:8000
+    depends_on:
+      - db      # Make sure the web service starts after the database is ready
+
+  db:
+    image: postgres:13  # Use the official PostgreSQL image
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # Persist database data
+    environment:
+      - POSTGRES_DB=schoolstudentmanagement  # Name of your database
+      - POSTGRES_USER=postgres  # Database username (change this)
+      - POSTGRES_PASSWORD=someting1234  # Database password (change this!)
+
+volumes:
+  postgres_data:  # Named volume for database data persistence

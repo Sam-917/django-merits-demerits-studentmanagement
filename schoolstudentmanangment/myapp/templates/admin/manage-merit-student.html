@@ -12,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Manage Merit Student</title>
+    <title> Admin - Manage Merit Student</title>
 
    <!-- Custom fonts for this template-->
    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
@@ -39,7 +39,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3"> Hi, Admin!</div>            </a>
+                <div class="sidebar-brand-text mx-3"> Hi, {{ request.user.username }}!</div>            </a>
 
             <!-- Divider -->
             <hr class="sidebar-divider my-0">

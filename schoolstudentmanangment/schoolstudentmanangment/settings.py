@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-(u#j_t_=##2id3@n3p39(jre=)*3e^f^j1u-odd_$3xw6&liab
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -77,11 +77,14 @@ WSGI_APPLICATION = 'schoolstudentmanangment.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'schoolstudentManagment',  # Database name
+        'USER': 'postgres',                 # Database user
+        'PASSWORD': 'someting1234',         # Database password
+        'HOST': 'localhost',                       # Hostname of the database container
+        'PORT': 5432,                       # Default PostgreSQL port
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -140,4 +143,3 @@ EMAIL_HOST_USER = 'someting983@gmail.com'
 EMAIL_HOST_PASSWORD = 'someting' 
 DEFAULT_FROM_EMAIL = 'someting983@gmail.com' 
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'www.meritdemerit-badawi.com', 'meritdemerit-badawi.com']
