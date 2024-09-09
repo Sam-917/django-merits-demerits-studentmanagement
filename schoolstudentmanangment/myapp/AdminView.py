@@ -124,4 +124,4 @@ def dashboard(request):
         'chart_data': chart_data,
         # Add any other data you want to pass to the dashboard
     }
-    return render(request, 'admin/dashboard.html', context)
+    return render(request, 'admin/index.html', context)

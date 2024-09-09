@@ -31,7 +31,7 @@ def admin_login(request):
 def admin_home(request):
     if not request.user.is_staff:  # Ensure only admins can access
         return HttpResponse('You are not authorized to view this page.')
-    return render(request, 'admin/dashboard.html')
+    return render(request, 'admin/index.html')
 
 def admin_logout(request):
     logout(request)
